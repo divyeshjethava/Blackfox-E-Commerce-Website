@@ -145,29 +145,28 @@ var mbl ;
 var ps ;
 let userData1 = [];
 const pro = ref(db,'user_master/');
+
+
 get(pro).then(snapshot => {
-   snapshot.forEach(function(childSnapshot) {
-    userData1.push(childSnapshot.val());
-
-
-
-})
+  snapshot.forEach(function(childSnapshot) {
+      userData1.push(childSnapshot.val());
+      
+  });
 loginBtn.addEventListener("click",function(){
 
   const lmobileValue = lmobile.value.trim();
-    const lpasswordValue = lpassword.value.trim();
+  const lpasswordValue = lpassword.value.trim();
 
 
-if (lmobileValue === "") {
-  alert('Mobile number is required');
+  if (lmobileValue === "") {
+    alert('Mobile number is required');
 } else if (lpasswordValue === "") {
-  alert('Password is required');
+    alert('Password is required');
 } else {
  
  
+  const user = userData1.find(user => String(user.phone).trim() === lmobileValue && user.password === lpasswordValue);
 
-
-  const user = userData1.find(user => user.phone.trim() === lmobileValue && user.password === lpasswordValue);
   if (user) {
       localStorage.setItem('phoneNumber', lmobileValue);
       window.location.href = 'home.html';
