@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="response.css">
+    <title>Blackfox - The Fashion Studio</title>
+    <link rel="icon" type="image/png" href="images/blacklogo.png">
+</head>
+<body>
+  
+    <section id="head">
+      <div id="logo">
+        <span>BLACKFOX</span>
+      </div>
+     
+      </div>
+     
+    </section>
+    <section id="body1">
+    
+  
+        <div id="check-contaner">
+        <div class="steps">
+          <div class="circle active" >1</div>
+          <div class="circle">2</div>
+          <div class="circle">3</div>
+          <div class="progreassline">
+            <span class="indicator"></span>
+          </div>
+        </div>
+  
+        <div id="check-contaner1">
+
+          <div id="shop__d">
+            <h1>Shiping Deatils</h1> 
+            <div class="intbox">
+               <span>Name</span>
+               <input type="text" id="Names">
+            </div>
+            <div class="intbox">
+              <span>Mobile No</span>
+              <input type="text" id="mobils">
+           </div>
+           <div class="intbox">
+            <span>Address(House No,Building,Street,Area)</span>
+            <input type="text" id="addresss">
+         </div>
+         <div class="intbox1">
+          <div>
+            <span>Pincode</span>
+            <input type="text" id="pincodes">
+          </div>
+  
+          <div id="a1s">
+            <span >City</span>
+            <input type="text" id="citys">
+          </div>
+         
+       </div>
+       <div class="intbox">
+        <span>State</span>
+        <input type="text" id="states">
+     </div>
+     <span id="yourps">Your Bag</span>
+     <div id="i_consw">
+
+     </div>
+     <button id="nexts">NEXT</button>
+             
+    </div>
+  
+  
+  
+          <div id="pay_con" >
+            <h1>Payment</h1> 
+
+
+<div id="card_con">
+  <div id="cardup">
+    <i class="fa-solid fa-credit-card"></i>
+    <span>Debit / Credit / Master Card </span>
+    <i class="fa-solid fa-angle-down" id="down"></i>
+  </div>
+
+  <div class="back">
+   
+    <div class="stripe">
+
+      <div class="box2">
+        <span>cvv</span>
+        <div class="cvv-box">cvv</div>
+        
+      </div>
+      <img src="images/mast_log-removebg-preview.png" alt="" id="mastlogo">
+    </div>
+   </div>
+   <div class="front">
+    <div class="imagec">
+      <img src="images/chis-removebg-preview.png" alt="" id="chip">
+     
+
+    </div>
+    <span class="cardnum">**** **** **** ****</span>
+    <div class="flexbox">
+      
+      <div class="box">
+        <span>Expires</span>
+        <div class="exprytion">
+          <span id="emonth">mm</span>
+          <span>/</span>
+          <span id="eyear">yy</span>
+        </div>
+      </div>
+      <div class="box1">
+        <span id="cardfullname">Card Holder Name</span>
+        <img src="images/mast_log-removebg-preview.png" alt="">
+      
+      </div>
+    </div>
+   </div>
+   
+  
+
+
+  <div class="intboxs">
+    <span id="sind" class="abc">Card number</span>
+    <input type="text" maxlength="19" id="cardnumber" placeholder="**** **** **** ****">
+ </div>
+
+<div class="intboxs">
+  <span id="sind1" class="abc">Card Holder name</span>
+  <input type="text" maxlength="30" id="Cardname" >
+</div>
+<div class="intboxs">
+  <span  id="sind2" class="abc">Expiry Date </span>
+  <input type="text" maxlength="5" id="edate" placeholder="mm/yy">
+</div>
+<div class="intboxs">
+  <span  id="sind3" class="abc">CVV </span>
+  <input type="text" maxlength="3" id="cvv" placeholder="***">
+</div>
+<button id="nexts1">PAY NOW</button>
+
+
+</div>
+<div id="upid1">
+  <div id="cardup">
+   <img src="images/upiicon.png" alt="">
+    <span>Other Payment Methods </span>
+  
+  </div>
+</div>
+          
+            
+             
+          
+        
+          
+          <div id="summry">
+            <h1>Conform Order</h1> 
+            <div class="payc">
+                <img src="images/5709755.png" alt="">
+                <span>PAYMENT SUCCESSFULLY</span>
+            </div>
+            <div id="lastpay">
+            <span id="odid"></span>
+            <span>Please Check The Delivery Status at</span>
+            <div>
+              <a href="profile.html" id="odt">Order Tracker</a>
+              <span>Page</span>
+            </div>
+          
+            </div>
+            <button id="nexts2">CONTINUE SHOPPING</button>
+          </div>
+  
+        </div>
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         
+        </div>
+     
+    </section>
+
+    <script>
+        function nextCard() {
+  const currentCard = document.querySelector('.current');
+  const nextCard = document.querySelector('.next');
+
+  currentCard.classList.remove('current');
+  currentCard.classList.add('next');
+  nextCard.classList.remove('next');
+  nextCard.classList.add('current');
+}
+    </script>
+      <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+   <script src="jsfiles/checks.js"></script>
+   <script type="module" src="jsfiles/checkout.js"></script>
+</body>
+
+</html>
